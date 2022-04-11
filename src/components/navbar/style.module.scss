@@ -1,0 +1,219 @@
+.navbar {
+	width: 100%;
+	padding: 27px 0;
+	z-index: 10000;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+
+}
+.logo {
+	position: relative;
+	padding:0 1.5em;
+	*{
+		object-fit: contain;
+		width: 100%;
+	}
+}
+
+.user_buttons li {
+    a {
+	color: hsl(257, 7%, 63%);
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	text-transform: capitalize;
+    }
+    a.active{
+        background-color: hsl(180, 66%, 49%);
+        color: white;
+        padding: 0.5em 1.2em;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+	}
+}
+
+.content {
+	margin: auto;
+	padding: 0px 100px;
+}
+.navbar .content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar .menu_list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+		gap: 2em;
+    }
+    li{
+        color: hsl(257, 7%, 63%);
+        font-weight: bold;
+		cursor: pointer;
+    }
+	li:hover{
+		filter:brightness(-10);
+		-webkit-filter:brightness(-10);
+}
+	.user_buttons{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+.menu_list li {
+	list-style: none;
+}
+
+
+
+.icon {
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+	display: none;
+}
+
+.icon#cancel_btn {
+	position: absolute;
+	right: 50px;
+	top: 30px;
+	color: white;
+}
+
+
+.menu_list li:hover #userIcon {
+	color: cyan;
+}
+@media screen and (max-width: 1000px) {
+	.content {
+		margin: auto;
+		padding: 0px 35px 0px 10px;
+	}
+	.navbar .menu_list#active {
+		top: 80px;
+		overflow: auto;
+		z-index: 10000;
+		display: block;
+	}
+	.icon {
+		display: block;
+		color: black;
+	}
+	.icon#hide {
+		display: none;
+	}
+	.navbar .menu_list {
+		display: none;
+		position: fixed;
+		left: 5%;
+		top: -100%;
+		min-height: fit-content;
+		height: fit-content;
+		width: 90%;
+		background-color: hsl(257, 27%, 26%);
+		display: block;
+		padding: 40px;
+		text-align: center;
+		transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		text-align: center;
+		z-index: 1000;
+		margin: auto;
+		border-radius: 25px;
+		-webkit-border-radius: 25px;
+		-moz-border-radius: 25px;
+		-ms-border-radius: 25px;
+		-o-border-radius: 25px;
+		ul{
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0;
+		}
+		ul.all_links{
+			border-bottom: 1.5px solid hsl(0, 0%, 75%);
+			padding-bottom: 1.5em;
+		}
+		li{
+			color: white;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		li:hover{
+			filter:brightness(-10);
+			-webkit-filter:brightness(-10);
+		}
+		.user_buttons{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: auto;
+			width: 100%;
+			li a{
+				color: white;
+			}
+			li{width: 100%;}
+			a.active{
+				border-radius: 25px;
+				display: block;
+				width: 100%;
+				padding:0.2em 2em;
+				-webkit-border-radius: 25px;
+				-moz-border-radius: 25px;
+				-ms-border-radius: 25px;
+				-o-border-radius: 25px;
+}
+		}
+}
+	.navbar .menu_list li {
+		margin-top: 25px;
+	}
+	.navbar .menu_list li a {
+		font-size: 25px;
+		text-transform: capitalize;
+	}
+	.menu_list :nth-child(1) {
+		order: 1;
+	}
+	.menu_list :nth-child(2) {
+		order: 1;
+	}
+	.menu_list :nth-child(3) {
+		order: 1;
+	}
+	.menu_list :nth-child(4) {
+		order: 1;
+	}
+	.menu_list :nth-child(5) {
+		order: 1;
+	}
+	.navbar {
+		padding: 30px 0;
+	}
+}
